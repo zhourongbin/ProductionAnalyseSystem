@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinglong.mapper.ResultMapper">
+  <resultMap id="BaseResultMap" type="com.xinglong.pojo.Result">
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="BenchNumber" jdbcType="VARCHAR" property="benchnumber" />
+    <result column="Ca" jdbcType="DOUBLE" property="ca" />
+    <result column="Cu" jdbcType="DOUBLE" property="cu" />
+    <result column="Fe" jdbcType="DOUBLE" property="fe" />
+    <result column="Mg" jdbcType="DOUBLE" property="mg" />
+    <result column="Zn" jdbcType="DOUBLE" property="zn" />
+    <result column="Mn" jdbcType="DOUBLE" property="mn" />
+    <result column="F" jdbcType="DOUBLE" property="f" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    Id, BenchNumber, Ca, Cu, Fe, Mg, Zn, Mn, F
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from result_
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from result_
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xinglong.pojo.Result">
+    insert into result_ (Id, BenchNumber, Ca, 
+      Cu, Fe, Mg, Zn, 
+      Mn, F)
+    values (#{id,jdbcType=INTEGER}, #{benchnumber,jdbcType=VARCHAR}, #{ca,jdbcType=DOUBLE}, 
+      #{cu,jdbcType=DOUBLE}, #{fe,jdbcType=DOUBLE}, #{mg,jdbcType=DOUBLE}, #{zn,jdbcType=DOUBLE}, 
+      #{mn,jdbcType=DOUBLE}, #{f,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xinglong.pojo.Result">
+    insert into result_
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="benchnumber != null">
+        BenchNumber,
+      </if>
+      <if test="ca != null">
+        Ca,
+      </if>
+      <if test="cu != null">
+        Cu,
+      </if>
+      <if test="fe != null">
+        Fe,
+      </if>
+      <if test="mg != null">
+        Mg,
+      </if>
+      <if test="zn != null">
+        Zn,
+      </if>
+      <if test="mn != null">
+        Mn,
+      </if>
+      <if test="f != null">
+        F,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="benchnumber != null">
+        #{benchnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="ca != null">
+        #{ca,jdbcType=DOUBLE},
+      </if>
+      <if test="cu != null">
+        #{cu,jdbcType=DOUBLE},
+      </if>
+      <if test="fe != null">
+        #{fe,jdbcType=DOUBLE},
+      </if>
+      <if test="mg != null">
+        #{mg,jdbcType=DOUBLE},
+      </if>
+      <if test="zn != null">
+        #{zn,jdbcType=DOUBLE},
+      </if>
+      <if test="mn != null">
+        #{mn,jdbcType=DOUBLE},
+      </if>
+      <if test="f != null">
+        #{f,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xinglong.pojo.Result">
+    update result_
+    <set>
+      <if test="benchnumber != null">
+        BenchNumber = #{benchnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="ca != null">
+        Ca = #{ca,jdbcType=DOUBLE},
+      </if>
+      <if test="cu != null">
+        Cu = #{cu,jdbcType=DOUBLE},
+      </if>
+      <if test="fe != null">
+        Fe = #{fe,jdbcType=DOUBLE},
+      </if>
+      <if test="mg != null">
+        Mg = #{mg,jdbcType=DOUBLE},
+      </if>
+      <if test="zn != null">
+        Zn = #{zn,jdbcType=DOUBLE},
+      </if>
+      <if test="mn != null">
+        Mn = #{mn,jdbcType=DOUBLE},
+      </if>
+      <if test="f != null">
+        F = #{f,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xinglong.pojo.Result">
+    update result_
+    set BenchNumber = #{benchnumber,jdbcType=VARCHAR},
+      Ca = #{ca,jdbcType=DOUBLE},
+      Cu = #{cu,jdbcType=DOUBLE},
+      Fe = #{fe,jdbcType=DOUBLE},
+      Mg = #{mg,jdbcType=DOUBLE},
+      Zn = #{zn,jdbcType=DOUBLE},
+      Mn = #{mn,jdbcType=DOUBLE},
+      F = #{f,jdbcType=DOUBLE}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
