@@ -21,27 +21,27 @@ public class TestMybatis {
 	        SqlSession session = sqlSessionFactory.openSession();
 	        ResultMapper mapper = session.getMapper(ResultMapper.class);
 
-//	        listAll(mapper);
+	        Query.listAll(mapper);
 	       
 //	        deleteByBenchnumber(mapper,"2018-4-2-150"); 	  
 //	        Result r = new Result();
 //	        Date d =new Date();
-//	        r.setBenchnumber("2018-4-1-552");
-//	        r.setCa((double)28);
-//	        r.setAl((double)58);
-//	        r.setCu(0.5);
-//	        r.setFe(0.5);
-//	        r.setMg((double)5);
-//	        r.setZn(0.5);
+//	        r.setBenchnumber("2018-1-4-577");
+//	        r.setCa((double)670);
+//	        r.setAl((double)399);
+//	        r.setCu((double)4501);
+//	        r.setFe(3.0);
+//	        r.setMg((double)242);
+//	        r.setZn((double)3578);
 //	        r.setF(0.18);
 //	        r.setMn((double)158);
 //	        r.setDate(new Date());
 //	        updateCa(mapper,"2018-1-6-555",20d);
 //	        selectByBenchnumber( mapper,"2018-1-6-555");
-//	        insertResult(mapper,r);
-	        Query.selectByBenchnumber(mapper,"552");
+//	        Query.insertResult(mapper,r);
+//	        Query.selectByBenchnumber(mapper,"552");
 //	        Query.setMg(mapper, "2018-4-1-552", 35d);
-	        Query.selectByBenchnumber(mapper,"555");
+//	        Query.selectByBenchnumber(mapper,"555");
 //	        listAll(mapper);
 //	        selectByBenchnumber(mapper,"1-");
 	     //   mapper.delete("2018-3-9");
@@ -56,7 +56,7 @@ public class TestMybatis {
 	            System.out.println(r);
 	        }
 	    }
-	 
+	
 	 private static void deleteByBenchnumber(ResultMapper mapper,String benchnumber) {
 		     mapper.delete(benchnumber);
 	 }

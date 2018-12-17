@@ -47,15 +47,5 @@ public interface ResultMapper {
 	@Select("select * from result_ where benchnumber like concat('%', #{benchnumber},'%')")
 	public Result selectOne(String benchnumber);
 	
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Result record);
-
-    int insertSelective(Result record);
-
-    Result selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Result record);
-
-    int updateByPrimaryKey(Result record);
+   
 }
