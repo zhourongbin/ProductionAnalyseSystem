@@ -1,4 +1,4 @@
-package com.xinglong.ui;
+package com.xinglong.util;
 
 public class Calculate {
 	/**

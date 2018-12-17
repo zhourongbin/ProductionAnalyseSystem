@@ -1,4 +1,4 @@
-package com.xinglong.ui;
+package com.xinglong.util;
 
 import java.util.*;
 import java.awt.BorderLayout;
@@ -20,10 +20,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.xinglong.ui.Calculate;
-import com.xinglong.ui.PASGUI;
 import com.xinglong.mapper.ResultMapper;
 import com.xinglong.pojo.*;
+import com.xinglong.util.Calculate;
+import com.xinglong.util.PASGUI;
 
 
 public class PASGUI extends JFrame {
