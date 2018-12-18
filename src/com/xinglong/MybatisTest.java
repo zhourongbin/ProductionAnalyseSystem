@@ -61,7 +61,7 @@ public class MybatisTest {
 		String bn = "2018-1-9-577";
 		Result r1 =resultMapper.selectOne(bn);
 		System.out.println(r1);
-		double ca = 25d;
+//		double ca = 25d;
 //	    resultMapper.updateCa(bn,ca);
 //		Result r2 =resultMapper.selectOne(bn);
 //		System.out.println(r2);
