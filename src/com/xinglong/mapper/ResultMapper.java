@@ -20,25 +20,25 @@ public interface ResultMapper {
     public int add(Result result); 
 	
 	@Update(" update result_ set ca =#{ca} where benchnumber=#{benchnumber}")
-	public int updateCa(String benchnumber , double ca);
+	public int updateCa(String benchnumber,double ca);
 	
 	@Update(" update result_ set cu =#{cu} where benchnumber=#{benchnumber}")
-	public int updateCu(String benchnumber ,double cu);
+	public int updateCu(String benchnumber,double cu);
 	
 	@Update(" update result_ set fe =#{fe} where benchnumber=#{benchnumber}")
-	public int updateFe(String benchnumber ,double fe);
+	public int updateFe(String benchnumber,double fe);
 	
 	@Update(" update result_ set mg =#{mg} where benchnumber=#{benchnumber}")
-	public int updateMg(String benchnumber ,double mg);
+	public int updateMg(String benchnumber,double mg);
 	
 	@Update(" update result_ set zn =#{zn} where benchnumber=#{benchnumber}")
-	public int updateZn(String benchnumber ,double zn);
+	public int updateZn(String benchnumber,double zn);
 	
-	@Update(" update result_ set  f =#{f} where benchnumber=#{benchnumber}")
-	public int updateF(String benchnumber ,double f);
+	@Update(" update result_ set  f =#{f}  where benchnumber=#{benchnumber}")
+	public int updateF (String benchnumber,double f);
 	
 	@Update(" update result_ set mn =#{mn} where benchnumber=#{benchnumber}")
-	public int updateMn(String benchnumber ,double mn);
+	public int updateMn(String benchnumber,double mn);
 	
 
 	//@Update(" update result_ set name=#{name} where id=#{id}")
