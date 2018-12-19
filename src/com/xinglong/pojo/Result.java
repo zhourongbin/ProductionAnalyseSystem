@@ -110,7 +110,8 @@ public class Result {
 	}
     @Override
     public String toString() {
-    	return benchnumber+"\t"+date+"\nAl:"+getAl()+" Ca:"+getCa()+" Cu:"+getCu()+" Fe:"+getFe()+" Mg:"+getMg()+" Zn:"+getZn();
+    	return benchnumber+"\t"+date+"\nAl:"+getAl()+" Ca:"+getCa()+" Cu:"+getCu()+
+    			" Fe:"+getFe()+" Mg:"+getMg()+" Zn:"+getZn()+" Mn:"+getMn()+" F:"+getF();
     }
     
 }
