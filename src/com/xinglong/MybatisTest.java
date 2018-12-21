@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.xinglong.mapper.ResultMapper;
 import com.xinglong.pojo.Result;
+import com.xinglong.util.BenchnumberFilter;
 /**
  * JUnit测试类
  * @author Administrator
@@ -72,20 +73,25 @@ public class MybatisTest {
 	@Test
 	public void testSelectOne() {
 		System.out.println(resultMapper);
-	    String bn = "2018-1-9-577";
+	    String str = "\\\\\" \\\\#2018-1-9$\\\\$@\\-577\"//!\t\n	~//";
+	    String bn = BenchnumberFilter.doFilter(str);
+	    System.out.println(bn);
 		Result r =resultMapper.selectOne(bn);	
 		System.out.println(r);
 	}
 	/**
 	 * 测试fuzzySelect方法
 	 * @since 2.0
+	 * 增加List对象的foreach遍历
 	 */
 	@Test
 	public void testFuzzySelect() {
 		System.out.println(resultMapper);
 	    String str = "577";
-		List<Result> r =resultMapper.fuzzySelect(str);	
-		System.out.println(r);
+		List<Result> rs =resultMapper.fuzzySelect(str);	
+		for (Result r:rs) {
+			System.out.println(r.getBenchnumber());
+		}
 	}
 	/**
 	 * 测试修改各元素方法
@@ -169,6 +175,7 @@ public class MybatisTest {
 		resultMapper.updateMn(bn,mn);
 		Result r2 =resultMapper.selectOne(bn);
 		System.out.println(r2);
+		
 	}
 	@Test
 	public void testupdateF() {
