@@ -3,6 +3,7 @@ package com.xinglong.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import org.junit.Ignore;
 import org.junit.Test;
 /**
  * MD5º”√‹
@@ -40,6 +41,7 @@ public class MD5Encode {
 		}
 		return buf.toString();
 	}
+	@Ignore
 	@Test
 	public void testMD5Encode() {
 		String s1=GetMD5("admin");

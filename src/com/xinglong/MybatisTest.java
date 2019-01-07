@@ -3,6 +3,7 @@ package com.xinglong;
 import java.util.Date;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ public class MybatisTest {
 	 * @author Administrator
 	 * @since 2.0
 	 */
+	@Ignore
 	@Test
 	public void testList() {
 		System.out.println(resultMapper);
@@ -41,17 +43,18 @@ public class MybatisTest {
 	 * @author Administrator
 	 * @since 2.0
 	 */
+	@Ignore
 	@Test
 	public void testAdd() {
 		System.out.println(resultMapper);//同一个resultMapper对象
 		Result r = new Result();
-		r.setBenchnumber("2018-1-6-555");
+		r.setBenchnumber("2019-1-1-001");
 		r.setDate(new Date());
-		r.setCa(47d);
+		r.setCa(470d);
 		r.setCu(0.5);
 		r.setFe(0.5);
-		r.setMg(54d);
-		r.setZn(3.3);
+		r.setMg(152d);
+		r.setZn(153.3);
 		System.out.println(r);
 		resultMapper.add(r);
 	}
@@ -59,6 +62,7 @@ public class MybatisTest {
 	 * 测试delete方法
 	 * @since 2.0
 	 */
+	@Ignore
 	@Test
 	public void testDelete() {
 		System.out.println(resultMapper);
@@ -70,6 +74,7 @@ public class MybatisTest {
 	 * 测试selectOne方法
 	 * @since 2.0
 	 */
+	@Ignore
 	@Test
 	public void testSelectOne() {
 		System.out.println(resultMapper);
@@ -84,6 +89,7 @@ public class MybatisTest {
 	 * @since 2.0
 	 * 增加List对象的foreach遍历
 	 */
+	@Ignore
 	@Test
 	public void testFuzzySelect() {
 		System.out.println(resultMapper);
@@ -98,6 +104,7 @@ public class MybatisTest {
 	 * Al/Ca/Cu/Fe/Mg/Zn/Mn/F
 	 * @since 2.0
 	 */
+	@Ignore
 	@Test
 	public void testupdateAl() {
 		System.out.println(resultMapper);
@@ -109,6 +116,7 @@ public class MybatisTest {
 		Result r2 =resultMapper.selectOne(bn);
 		System.out.println(r2);
 	}
+	@Ignore
 	@Test
 	public void testupdateCa() {
 		System.out.println(resultMapper);
@@ -121,6 +129,7 @@ public class MybatisTest {
 		System.out.println(r2);
 		
 	}
+	@Ignore
 	@Test
 	public void testupdateCu() {
 		System.out.println(resultMapper);
@@ -132,6 +141,7 @@ public class MybatisTest {
 		Result r2 =resultMapper.selectOne(bn);
 		System.out.println(r2);
 	}
+	@Ignore
 	@Test
 	public void testupdateFe() {
 		System.out.println(resultMapper);
@@ -143,6 +153,7 @@ public class MybatisTest {
 		Result r2 =resultMapper.selectOne(bn);
 		System.out.println(r2);
 	}
+	@Ignore
 	@Test
 	public void testupdateMg() {
 		System.out.println(resultMapper);
@@ -154,6 +165,7 @@ public class MybatisTest {
 		Result r2 =resultMapper.selectOne(bn);
 		System.out.println(r2);
 	}
+	@Ignore
 	@Test
 	public void testupdateZn() {
 		System.out.println(resultMapper);
@@ -165,6 +177,7 @@ public class MybatisTest {
 		Result r2 =resultMapper.selectOne(bn);
 		System.out.println(r2);
 	}
+	@Ignore
 	@Test
 	public void testupdateMn() {
 		System.out.println(resultMapper);
@@ -177,6 +190,7 @@ public class MybatisTest {
 		System.out.println(r2);
 		
 	}
+	@Ignore
 	@Test
 	public void testupdateF() {
 		System.out.println(resultMapper);

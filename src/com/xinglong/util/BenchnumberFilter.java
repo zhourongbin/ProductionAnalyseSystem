@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
+import org.junit.Ignore;
 import org.junit.Test;
 /**
  * 批号字符串过滤类
@@ -24,6 +25,7 @@ public static String doFilter(String str) throws PatternSyntaxException {
 	String benchnumberstr = m.replaceAll("").trim();
 	return benchnumberstr;
     }
+@Ignore
 @Test
 public void testStringFilter() throws PatternSyntaxException{
 	String   str   =   "2018\\\" \\\\-3#$\\$@-12\"////-abcd'}{|下面八?><:!\t\n	~223";  

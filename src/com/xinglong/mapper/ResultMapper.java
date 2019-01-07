@@ -83,7 +83,7 @@ public interface ResultMapper {
 	 * @return 修改记录的条目数
 	 */
 	@Update(" update result_ set zn =#{zn} where benchnumber=#{benchnumber}")
-	public int updateZn(@Param("benchnumber")String benchnumber,@Param("zn")double zn);
+	public int updateZn(@Param("benchnumber")String  benchnumber,@Param("zn")double zn);
 	/**
 	 * 
 	 * @param benchnumber
